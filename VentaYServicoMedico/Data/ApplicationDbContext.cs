@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using VentaYServicoMedico.Models;
 
 namespace VentaYServicoMedico.Data
 {
@@ -12,5 +13,8 @@ namespace VentaYServicoMedico.Data
             : base(options)
         {
         }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Product> Product { get; set; }
+       
     }
 }
