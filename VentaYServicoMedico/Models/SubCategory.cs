@@ -12,12 +12,12 @@ namespace VentaYServicoMedico.Models
         [Key]
         public int Id { get; set; }
 
-        [Display(Name = "Subcategoria")]
+        [Display(Name = "SubCategory")]
         [Required]
         public string Name { get; set; }
 
         [Required]
-        [Display(Name = "Categoria")]
+        [Display(Name = "Category")]
         public int CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]

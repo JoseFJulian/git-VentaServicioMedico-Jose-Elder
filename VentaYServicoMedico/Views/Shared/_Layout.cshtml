@@ -21,14 +21,24 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Customer" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                        <li class="nav-item dropdown text-black-50">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownMenuLink"
+                               role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                Content Management
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navabarDropDownMenuLink">
+                                <a class="dropdown-item" asp-action="Index"
+                                   asp-controller="Category" asp-area="Admin">Category</a>
+                                <a class="dropdown-item" asp-action="Index"
+                                   asp-controller="SubCategory" asp-area="Admin">SubCategory</a>
+                                @*<a class="dropdown-item" asp-action="Index"
+                                   asp-controller="MenuItem" asp-area="Admin">SubCategory Item</a>
+                                <a class="dropdown-item" asp-action="Index"
+                                   asp-controller="Coupon" asp-area="Admin">Coupon</a>
+                                <a class="dropdown-item" asp-action="Index"
+                                   asp-controller="User" asp-area="Admin">Users</a>*@
+                            </div>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
