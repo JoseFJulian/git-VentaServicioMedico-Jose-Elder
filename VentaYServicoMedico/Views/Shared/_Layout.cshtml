@@ -12,32 +12,60 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="Customer" asp-controller="Home" asp-action="Index">VentaYServicoMedico</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
+            <div class="container" style="margin-left:0px">
+                <a class="navbar-brand align-items-end" asp-area="Customer" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/VentaServicioMedico.png" style="width:10%; height:10%;" />
+                    <b style="color:white">Venta y Servicio Médico</b>
+                </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item dropdown text-black-50">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownMenuLink"
+                        <li class="nav-item dropdown text-white font-weight-bold">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropDownMenuLink"
                                role="button" data-toggle="dropdown" aria-haspopup="true"
                                aria-expanded="false">
-                                Content Management
+                                <i class="fas fa-hospital-user fa-lg"></i>Content management  
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navabarDropDownMenuLink">
                                 <a class="dropdown-item" asp-action="Index"
-                                   asp-controller="Category" asp-area="Admin">Category</a>
+                                   asp-controller="Category" asp-area="Admin"><i class="fas fa-tags"></i> Category</a>
                                 <a class="dropdown-item" asp-action="Index"
-                                   asp-controller="SubCategory" asp-area="Admin">SubCategory</a>
+                                   asp-controller="SubCategory" asp-area="Admin"><i class="fas fa-tag"></i> SubCategory</a>
                                 <a class="dropdown-item" asp-action="Index"
-                                   asp-controller="MenuItem" asp-area="Admin">SubCategory Item</a>
+                                   asp-controller="MenuItem" asp-area="Admin"><i class="fas fa-prescription-bottle-alt"></i> Products Item</a>
                                 <a class="dropdown-item" asp-action="Index"
-                                   asp-controller="Coupon" asp-area="Admin">Coupon</a>
-                                @*<a class="dropdown-item" asp-action="Index"
-                                   asp-controller="User" asp-area="Admin">Users</a>*@
+                                   asp-controller="Coupon" asp-area="Admin"><i class="fas fa-receipt"></i> Coupon</a>
+                                <a class="dropdown-item" asp-action="Index"
+                                   asp-controller="User" asp-area="Admin"><i class="fas fa-hospital-user"></i> Users</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item dropdown text-white font-weight-bold">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropDownMenuLink"
+                               role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                <i class="fas fa-laptop-medical fa-lg"></i>Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navabarDropDownMenuLink">
+                                <a class="dropdown-item" asp-action="Index"
+                                   asp-controller="MedicalAppointment" asp-area="Admin"><i class="fas fa-hand-holding-medical"></i> Medical appointment</a>
+                                <a class="dropdown-item" asp-action="Index"
+                                   asp-controller="Injection" asp-area="Admin"><i class="fas fa-syringe"></i> Injections</a>
+                                <a class="dropdown-item" asp-action="Index"
+                                   asp-controller="BloodPressure" asp-area="Admin"><i class="fas fa-heartbeat"></i> BloodPressure</a>
+
                             </div>
                         </li>
                     </ul>
@@ -57,6 +85,7 @@
             &copy; 2021 - VentaYServicoMedico - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

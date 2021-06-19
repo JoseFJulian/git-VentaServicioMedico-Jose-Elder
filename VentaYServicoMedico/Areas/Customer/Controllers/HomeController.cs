@@ -1,28 +1,51 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using VentaYServicoMedico.Data;
 using VentaYServicoMedico.Models;
+using VentaYServicoMedico.Models.ViewModels;
 
 namespace VentaYServicoMedico.Controllers
 {
     [Area("Customer")]
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _db;
+        public HomeController(ApplicationDbContext db)
         {
-            _logger = logger;
+            _db = db;
         }
-
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            IndexViewModel IndexVM = new IndexViewModel()
+            {
+                MenuItem = await
+                     _db.MenuItem.Include(m => m.Category).Include(m => m.SubCategory).ToListAsync(),
+                Category = await _db.Category.ToListAsync(),
+                Coupon = await _db.Coupon.Where(c => c.IsActive == true).ToListAsync()
+            };
+
+            //Crea una instancia de notificaciones (reclamos) basándose en User.Identity
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            //notificación que especifica el nombre de una entidad
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            if (claim != null)
+            {
+                //var cnt = _db.ShoppingCart.Where(u => u.ApplicationUserId
+                //                 == claim.Value).ToList().Count;                 FALTA MODEL CARRITO COMPRA
+                //HttpContext.Session.SetInt32(SD.ssShoppingCartCount, cnt);
+            }
+            return View(IndexVM);
         }
+        //FALTA MEDOTO DETAILS TENIA MUCHO DEL CARRITO TONCE NO LO AÑADÍ PARA NO TENER QUE COMENTAR TODO Y FEO
 
         public IActionResult Privacy()
         {
