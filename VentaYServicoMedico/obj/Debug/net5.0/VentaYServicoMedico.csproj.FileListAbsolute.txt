@@ -2307,3 +2307,15 @@ C:\Users\Jose JFajardo\OneDrive\Escritorio\Pro\git-VentaServicioMedico-Jose-Elde
 C:\Users\Jose JFajardo\OneDrive\Escritorio\Pro\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\Jose JFajardo\OneDrive\Escritorio\Pro\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Jose JFajardo\OneDrive\Escritorio\Pro\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ForgotPassword.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\SetPassword.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ResetPassword.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
