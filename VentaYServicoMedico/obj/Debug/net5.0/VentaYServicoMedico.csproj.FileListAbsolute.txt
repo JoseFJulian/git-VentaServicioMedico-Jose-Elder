@@ -2347,3 +2347,4 @@ C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jos
 C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
 C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\VentaYServicoMedico.csproj.AssemblyReference.cache
+C:\Users\elder\Desktop\Progra IV\VentaServicioMedico\git-VentaServicioMedico-Jose-Elder\VentaYServicoMedico\obj\Debug\net5.0\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
