@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using VentaYServicoMedico.Data;
 using VentaYServicoMedico.Models;
 using VentaYServicoMedico.Models.ViewModels;
+using VentaYServicoMedico.Utility;
 
 namespace VentaYServicoMedico.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = SD.ManagerUser)]
+    [Authorize(Roles = SD.ManagerUser)]
     public class SubCategoryController : Controller
     {
         private readonly ApplicationDbContext _db;

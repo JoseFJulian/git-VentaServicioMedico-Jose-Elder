@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,10 +8,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using VentaYServicoMedico.Data;
 using VentaYServicoMedico.Models;
+using VentaYServicoMedico.Utility;
 
 namespace VentaYServicoMedico.Areas.Admin.Controllers
 {
     [Area("Admin")]
+ 
     public class CouponController : Controller
     {
         private readonly ApplicationDbContext _db;

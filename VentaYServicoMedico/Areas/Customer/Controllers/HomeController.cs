@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using VentaYServicoMedico.Data;
 using VentaYServicoMedico.Models;
 using VentaYServicoMedico.Models.ViewModels;
+using VentaYServicoMedico.Utility;
 
 namespace VentaYServicoMedico.Controllers
 {
@@ -39,13 +40,12 @@ namespace VentaYServicoMedico.Controllers
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
             if (claim != null)
             {
-                //var cnt = _db.ShoppingCart.Where(u => u.ApplicationUserId
-                //                 == claim.Value).ToList().Count;                 FALTA MODEL CARRITO COMPRA
-                //HttpContext.Session.SetInt32(SD.ssShoppingCartCount, cnt);
+                var cnt = _db.ShoppingCart.Where(u => u.ApplicationUserId
+                                 == claim.Value).ToList().Count;
+                HttpContext.Session.SetInt32(SD.ssShoppingCartCount, cnt);
             }
             return View(IndexVM);
         }
-        //FALTA MEDOTO DETAILS TENIA MUCHO DEL CARRITO TONCE NO LO AÑADÍ PARA NO TENER QUE COMENTAR TODO Y FEO
 
         public IActionResult Privacy()
         {

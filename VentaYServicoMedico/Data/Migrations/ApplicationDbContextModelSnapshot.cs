@@ -331,6 +331,27 @@ namespace VentaYServicoMedico.Data.Migrations
                     b.ToTable("Product");
                 });
 
+            modelBuilder.Entity("VentaYServicoMedico.Models.ShoppingCart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MenuItemId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ShoppingCart");
+                });
+
             modelBuilder.Entity("VentaYServicoMedico.Models.SubCategory", b =>
                 {
                     b.Property<int>("Id")

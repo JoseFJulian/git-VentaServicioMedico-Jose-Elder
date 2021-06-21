@@ -3,35 +3,35 @@
 
 @if (Model.Coupon.ToList().Count > 0)
 {
-    <div class="border"style="margin-top:-35px; margin-bottom:59px">
+    <div class="border" style="margin-top:-35px; margin-bottom:59px">
         <div class="carousel" data-ride="carousel" data-interval="2500">
-            
-                @for (int i = 0; i < Model.Coupon.Count(); i++)
+
+            @for (int i = 0; i < Model.Coupon.Count(); i++)
+            {
+                if (i == 0)
                 {
-                    if (i == 0)
-                    {
-                       
-                            <div class="carousel-item active">
-                                @{
-                                    var base64 = Convert.ToBase64String(Model.Coupon.ToList()[i].Picture);
-                                    var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
-                                }
-                                <img src="@imgsrc" style="height:135px" class="d-block w-100" />
-                            </div>
-                    }
-                    else
-                    {
-                            <div class="carousel-item ">
-                                @{
-                                        var base64 = Convert.ToBase64String(Model.Coupon.ToList()[i].Picture);
-                                        var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
-                                }
-                                <img src="@imgsrc" style="height:135px;" class="d-block w-100"/>
-                            </div>
-                      
-                    }
-                 }
-           
+
+                    <div class="carousel-item active">
+                        @{
+                            var base64 = Convert.ToBase64String(Model.Coupon.ToList()[i].Picture);
+                            var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                        }
+                        <img src="@imgsrc" style="height:135px" class="d-block w-100" />
+                    </div>
+                }
+                else
+                {
+                    <div class="carousel-item ">
+                        @{
+                            var base64 = Convert.ToBase64String(Model.Coupon.ToList()[i].Picture);
+                            var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                        }
+                        <img src="@imgsrc" style="height:135px;" class="d-block w-100" />
+                    </div>
+
+                }
+            }
+
         </div>
     </div>
 }
@@ -41,7 +41,7 @@
 
 <div class="backgroundWhite container">
     <ul id="menu-filters" class="menu-filter-list list-inline text-center">
-        <li class="list-inline-item active btn btn-secondary ml-1 mr-1"
+        <li class="list-inline-item active btn btn-primary ml-1 mr-1"
             data-filter=".menu-restaurant">Show All</li>
 
         @foreach (var item in Model.Category)
@@ -69,8 +69,8 @@
         var posts = $('.post');
         (function ($) {
             $("#menu-filters li").click(function () {
-                $("#menu-filters li").removeClass('active btn btn-secondary');
-                $(this).addClass('active btn btn-secondary');
+                $("#menu-filters li").removeClass('active btn btn-primary');
+                $(this).addClass('active btn btn-primary');
 
                 var selectedFilter = $(this).data("filter");
 

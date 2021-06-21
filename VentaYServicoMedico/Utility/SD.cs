@@ -8,19 +8,19 @@ namespace VentaYServicoMedico.Utility
 {
     public class SD
     {
-        public const string DefaultFoodImage = "PrincipalFood.png";
+        public const string DefaultFoodImage = "VentaServicioMedico.png";
         public const string CustomerEndUser = "Customer";
         public const string FrontDeskUser = "FrontDesk";      
         public const string ManagerUser = "Manager";
-
+        public const string DoctorUser = "Doctor";
         public const string ssShoppingCartCount = "ssCartCount";
 
         public const string ssCouponCode = "ssCouponCode";
         public const string StatusSubmitted = "Submitted";
-        public const string StatusInProcess = "Being Prepared";
-        public const string StatusReady = "Ready for PickUp";
-        public const string StatusCompleted = "Completed";
-        public const string StatusCancelled = "Canceled";
+        public const string StatusInProcess = "Waiting list";
+        public const string StatusReady = "Ready to appointmen";
+        public const string StatusCompleted = "Confirmered";
+        public const string StatusCancelled = "Completed";
 
         public const string PaymentStatusPending = "Pending";
         public const string PaymentStatusApproved = "Approved";
