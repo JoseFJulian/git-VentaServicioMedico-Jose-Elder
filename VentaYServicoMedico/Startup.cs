@@ -20,6 +20,7 @@ using VentaYServicoMedico.Utility;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
 using Microsoft.AspNetCore.Localization;
+using Stripe;
 //using Stripe;
 
 namespace VentaYServicoMedico
@@ -49,9 +50,9 @@ namespace VentaYServicoMedico
             //services.AddScoped<IDbInitiatializer, DbIniatializer>();
             //end to iniatilizer to azure deployment
 
-            //stripe Configuration 
-            //services.Configure<StripeSettings>
-            //    (Configuration.GetSection("Stripe"));
+            //stripe Configuration
+            services.Configure<StripeSettings>
+                (Configuration.GetSection("Stripe"));
             //end stripe configuration
 
 
@@ -120,8 +121,8 @@ namespace VentaYServicoMedico
             app.UseRouting();
             //dbInitiatializer.Inittialize();
             //use for Stripe configuation
-            //StripeConfiguration.ApiKey =
-            //    Configuration.GetSection("Stripe")["SecretKey"];
+            StripeConfiguration.ApiKey =
+                Configuration.GetSection("Stripe")["SecretKey"];
             //end configuration
 
             app.UseAuthentication();

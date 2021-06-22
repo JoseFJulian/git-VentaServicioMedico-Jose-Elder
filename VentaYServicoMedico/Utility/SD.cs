@@ -17,10 +17,10 @@ namespace VentaYServicoMedico.Utility
 
         public const string ssCouponCode = "ssCouponCode";
         public const string StatusSubmitted = "Submitted";
-        public const string StatusInProcess = "Waiting list";
-        public const string StatusReady = "Ready to appointmen";
-        public const string StatusCompleted = "Confirmered";
-        public const string StatusCancelled = "Completed";
+        public const string StatusInProcess = "Being Prepared";
+        public const string StatusReady = "Ready for PickUp";
+        public const string StatusCompleted = "Completed";
+        public const string StatusCancelled = "Canceled";
 
         public const string PaymentStatusPending = "Pending";
         public const string PaymentStatusApproved = "Approved";

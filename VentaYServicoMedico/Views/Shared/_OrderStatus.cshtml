@@ -1,0 +1,21 @@
+﻿@model string
+@using VentaYServicoMedico.Utility
+<div style="width:100%">
+    @if (Model == SD.StatusSubmitted)
+    {
+
+        <img src="~/images/OrderPlacedVyM.png" style="width:100%" />
+    }
+    @if (Model == SD.StatusInProcess)
+    {
+        <img src="~/images/PreparingOrderVyM.png" style="width:100%" />
+    }
+    @if (Model == SD.StatusReady)
+    {
+        <img src="~/images/OrderReadyVyM.png" style="width:100%" />
+    }
+    @if (Model == SD.StatusCompleted)
+    {
+        <img src="~/images/CompletedVyM.png" style="width:100%" />
+    }
+</div>
