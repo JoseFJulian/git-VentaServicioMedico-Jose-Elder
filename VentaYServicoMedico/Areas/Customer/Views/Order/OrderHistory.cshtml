@@ -18,64 +18,73 @@
         @if (Model.Orders.Count() > 0)
         {
             @*<table class="table table-striped border">*@
-            <table class="table table-hover .table-responsive" id="TbOrderHistory">
-                <tr class="table-secondary">
-                    <th>
-                        @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.Id)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.PickupName)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.ApplicationUser.Email)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.PickUpTime)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.OrderTotal)
-                    </th>
-                    <th>
-                        Total Items
-                    </th>
-                    <th></th>
-                </tr>
-                @foreach (var item in Model.Orders)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(m => item.OrderHeader.Id)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.OrderHeader.PickupName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.OrderHeader.ApplicationUser.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.OrderHeader.PickUpTime)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.OrderHeader.OrderTotal)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.OrderDetails.Count)
-                        </td>
-                        <td>
-                            @*anchordetail is the name of button referenced in javascript function*@
-                            <button type="submit" class="btn btn-success anchorDetail"
-                                    data-id="@item.OrderHeader.Id" data-toggle="modal">
-                                <i class="far fa-list-alt"></i> Details
-                            </button>
-                            @if (item.OrderHeader.Status == SD.StatusSubmitted || item.OrderHeader.Status == SD.StatusInProcess || item.OrderHeader.Status == SD.StatusCompleted || item.OrderHeader.Status == SD.StatusReady)
-                            {
-                                <button type="button" class="btn btn-info btnOrderStatus" data-id="@item.OrderHeader.Id" data-toggle="modal">
-                                    <i class="far fa-clock"></i> Status
-                                </button>
-                            }
-                        </td>
+            <table id="table" class="table table-hover .table-responsive" id="TbOrderHistory">
+                <thead>
+
+
+                    <tr class="table-secondary">
+                        <th>
+                            @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.Id)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.PickupName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.ApplicationUser.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.PickUpTime)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.OrderTotal)
+                        </th>
+                        <th>
+                            Total Items
+                        </th>
+                        <th></th>
                     </tr>
-                }
+                </thead>
+                <tbody>
+
+
+                    @foreach (var item in Model.Orders)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => item.OrderHeader.Id)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.OrderHeader.PickupName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.OrderHeader.ApplicationUser.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.OrderHeader.PickUpTime)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.OrderHeader.OrderTotal)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.OrderDetails.Count)
+                            </td>
+                            <td>
+                                @*anchordetail is the name of button referenced in javascript function*@
+                                <button type="submit" class="btn btn-success anchorDetail"
+                                        data-id="@item.OrderHeader.Id" data-toggle="modal">
+                                    <i class="far fa-list-alt"></i> Details
+                                </button>
+                                @if (item.OrderHeader.Status == SD.StatusSubmitted || item.OrderHeader.Status == SD.StatusInProcess || item.OrderHeader.Status == SD.StatusCompleted || item.OrderHeader.Status == SD.StatusReady)
+                                {
+                                    <button type="button" class="btn btn-info btnOrderStatus" data-id="@item.OrderHeader.Id" data-toggle="modal">
+                                        <i class="far fa-clock"></i> Status
+                                    </button>
+                                }
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
             </table>
             <div page-model="@Model.PagingInfo" Page-classes-enabled="true"
                  page-class="btn border" page-class-normal="btn btn-light"
@@ -167,4 +176,54 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $('#table').DataTable({
+                //language: {
+                //    "lengthMenu": "Mostrar _MENU_ registros",
+                //    "zeroRecords": "No se encontraron resultados",
+                //    "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                //    "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                //    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                //    "sSearch": "Buscar:",
+                //    "oPaginate": {
+                //        "sFirst": "Primero",
+                //        "sLast": "Último",
+                //        "sNext": "Siguiente",
+                //        "sPrevious": "Anterior"
+                //    },
+                //    "sProcessing": "Procesando...",
+                //},
+                responsive: "true",
+                dom: 'Bfrtilp',
+                buttons: [
+                    {
+                        extend: 'excelHtml5',
+                        text: '<i class="fas fa-file-excel"></i> ',
+                        titleAttr: 'Exportar a Excel',
+                        className: 'btn btn-success'
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        text: '<i class="fas fa-file-pdf"></i> ',
+                        titleAttr: 'Exportar a PDF',
+                        className: 'btn btn-danger'
+                    },
+                    {
+                        extend: 'print',
+                        text: '<i class="fa fa-print"></i> ',
+                        titleAttr: 'Imprimir',
+                        className: 'btn btn-info'
+                    },
+                ]
+            });
+        });
+
+
+
+
+
+
+    </script>
+
 }

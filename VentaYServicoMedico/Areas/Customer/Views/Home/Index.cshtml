@@ -1,9 +1,9 @@
 ﻿@model VentaYServicoMedico.Models.ViewModels.IndexViewModel
-<br />
 
 @if (Model.Coupon.ToList().Count > 0)
 {
-    <div class="border" style="margin-top:-35px; margin-bottom:59px">
+    <div class="backgroundWhite container w-100" >
+        <br />
         <div class="carousel" data-ride="carousel" data-interval="2500">
 
             @for (int i = 0; i < Model.Coupon.Count(); i++)
@@ -16,7 +16,7 @@
                             var base64 = Convert.ToBase64String(Model.Coupon.ToList()[i].Picture);
                             var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
                         }
-                        <img src="@imgsrc" style="height:135px" class="d-block w-100" />
+                        <img src="@imgsrc" style="height:70px; margin-top:-50px" class="d-block w-100" />
                     </div>
                 }
                 else
@@ -26,7 +26,7 @@
                             var base64 = Convert.ToBase64String(Model.Coupon.ToList()[i].Picture);
                             var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
                         }
-                        <img src="@imgsrc" style="height:135px;" class="d-block w-100" />
+                        <img src="@imgsrc" style="height:70px;  " class="d-block w-100" />
                     </div>
 
                 }
@@ -35,9 +35,6 @@
         </div>
     </div>
 }
-
-<br />
-<br />
 
 <div class="backgroundWhite container">
     <ul id="menu-filters" class="menu-filter-list list-inline text-center">
