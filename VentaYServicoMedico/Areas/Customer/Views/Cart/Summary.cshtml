@@ -17,11 +17,11 @@
                     <div class="card-header bg-dark text-light ml-0 row container">
                         <div class="col-6">
                             <i class="fa fa_shopping-cart"></i> &nbsp;
-                            Order summary
+                            Order summary <i class="fas fa-clipboard-list"></i>
                         </div>
                         <div class="col-6 text-right">
                             <a asp-area="Customer" asp-controller="Cart" asp-action="Index"
-                               class="btn btn-outline-info btn-sm">Back to Cart</a>
+                               class="btn btn-outline-info btn-sm"><i class="fas fa-long-arrow-alt-left"></i> Back to Cart</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -153,7 +153,7 @@
                                     </script>
                                     <button type="submit" id="btnPlaceOrder" onclick="return validateInput()"
                                             value="Place Order" class="btn btn-success form-control">
-                                        Place Order
+                                        Place Order <i class="fas fa-file-invoice-dollar"></i>
                                     </button>
                                 </div>
                             </div>

@@ -26,7 +26,7 @@
                             var base64 = Convert.ToBase64String(Model.Coupon.ToList()[i].Picture);
                             var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
                         }
-                        <img src="@imgsrc" style="height:70px;  " class="d-block w-100" />
+                        <img src="@imgsrc" style="height:70px; margin-top:-50px" class="d-block w-100" />
                     </div>
 
                 }

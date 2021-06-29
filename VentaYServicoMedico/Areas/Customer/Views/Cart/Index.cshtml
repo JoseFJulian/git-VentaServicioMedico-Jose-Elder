@@ -15,11 +15,11 @@
                     <div class="card-header bg-dark text-light ml-0 row container">
                         <div class="col-6">
                             <i class="fa fa_shopping-cart"></i> &nbsp;
-                            Shopping Cart
+                            Shopping Cart <i class="fas fa-shopping-cart"></i>
                         </div>
                         <div class="col-6 text-right">
                             <a asp-area="Customer" asp-controller="Home" asp-action="Index"
-                               class="btn btn-outline-info btn-sm">Continue shopping</a>
+                               class="btn btn-outline-info btn-sm">Continue shopping <i class="fas fa-cart-plus"></i></a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -95,7 +95,7 @@
                                     <div class="col-5" style="margin-top:2px;">
                                         <button type="submit" class="btn btn-sm form-control btn-outline-success"
                                                 id="btnCoupon" asp-action="AddCoupon">
-                                            Apply
+                                            Apply <i class="fas fa-receipt"></i>
                                         </button>
                                         <button type="submit" class="btn btn-sm form-control btn-outline-danger" style="display:none;"
                                                 id="btnRemoveCoupon" asp-action="RemoveCoupon">
@@ -124,7 +124,7 @@
                     <div class="card-footer">
                         <div class="col-12 col-lg-4 offset-lg-8 col-md-6 offset-md-6">
                             <a asp-action="Summary" asp-area="Customer" asp-controller="Cart"
-                               class="btn btn-success form-control">Summary</a>
+                               class="btn btn-success form-control">Summary <i class="fas fa-clipboard-list"></i></a>
                         </div>
                     </div>
                 </div>

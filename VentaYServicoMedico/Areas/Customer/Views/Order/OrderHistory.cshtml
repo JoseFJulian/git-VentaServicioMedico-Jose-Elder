@@ -17,12 +17,13 @@
     <div>
         @if (Model.Orders.Count() > 0)
         {
+        <div class="table-responsive">
             @*<table class="table table-striped border">*@
             <table id="table" class="table table-hover .table-responsive" id="TbOrderHistory">
                 <thead>
 
 
-                    <tr class="table-secondary">
+                    <tr class="table-info">
                         <th>
                             @Html.DisplayNameFor(m => m.Orders[0].OrderHeader.Id)
                         </th>
@@ -86,6 +87,7 @@
                     }
                 </tbody>
             </table>
+        </div>
             <div page-model="@Model.PagingInfo" Page-classes-enabled="true"
                  page-class="btn border" page-class-normal="btn btn-light"
                  page-class-selected="btn btn-info active"
