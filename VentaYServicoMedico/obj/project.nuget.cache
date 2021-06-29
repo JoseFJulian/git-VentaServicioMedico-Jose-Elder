@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PiQCkzd9e1ZDMywzOjGwu26BsRw3tmzdWjo/NyIosaOeQ6jeFjI8LjZ876axIWiV+4mEJ8zaiagQhHDOnw1GRg==",
+  "dgSpecHash": "kE56uj3Ut4dFK+B+JveDZGRJzLFwSCYPgHznCjmHNLBkWAYMF855PtM3CNb2+oeqID/Hqhmmhb5xeyxEqt0mkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jose JFajardo\\OneDrive\\Escritorio\\Pro\\git-VentaServicioMedico-Jose-Elder\\VentaYServicoMedico\\VentaYServicoMedico.csproj",
+  "projectFilePath": "C:\\Users\\Jose JFajardo\\OneDrive\\Escritorio\\VentaYServicioMedico\\git-VentaServicioMedico-Jose-Elder\\VentaYServicoMedico\\VentaYServicoMedico.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jose JFajardo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Jose JFajardo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.6\\microsoft.aspnetcore.cryptography.internal.5.0.6.nupkg.sha512",

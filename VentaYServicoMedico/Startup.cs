@@ -21,6 +21,7 @@ using Microsoft.Extensions.FileProviders;
 using System.IO;
 using Microsoft.AspNetCore.Localization;
 using Stripe;
+using FastFood.Data;
 //using Stripe;
 
 namespace VentaYServicoMedico
@@ -47,7 +48,7 @@ namespace VentaYServicoMedico
             services.AddSingleton<IEmailSender, EmailSender>();
 
             //iniatilizer to azure and others we deployment
-            //services.AddScoped<IDbInitiatializer, DbIniatializer>();
+            services.AddScoped<IDbInitiatializer, DbIniatializer>();
             //end to iniatilizer to azure deployment
 
             //stripe Configuration
@@ -84,8 +85,8 @@ namespace VentaYServicoMedico
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env
-                              /*IDbInitiatializer dbInitiatializer*/)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+                              IDbInitiatializer dbInitiatializer)
         {
             //to manage the decimal point and others
             //characteristic of global setting
@@ -119,7 +120,7 @@ namespace VentaYServicoMedico
             app.UseCookiePolicy();
             app.UseSession();
             app.UseRouting();
-            //dbInitiatializer.Inittialize();
+            dbInitiatializer.Inittialize();
             //use for Stripe configuation
             StripeConfiguration.ApiKey =
                 Configuration.GetSection("Stripe")["SecretKey"];
